@@ -1,0 +1,555 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		008914821C74306A000877CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008914811C74306A000877CE /* AppDelegate.swift */; };
+		008914841C74306A000877CE /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 008914831C74306A000877CE /* art.scnassets */; };
+		008914861C74306A000877CE /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008914851C74306A000877CE /* GameViewController.swift */; };
+		008914891C74306A000877CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 008914871C74306A000877CE /* Main.storyboard */; };
+		0089148B1C74306A000877CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0089148A1C74306A000877CE /* Assets.xcassets */; };
+		0089148E1C74306A000877CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0089148C1C74306A000877CE /* LaunchScreen.storyboard */; };
+		008914991C74306A000877CE /* cubeThrowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008914981C74306A000877CE /* cubeThrowTests.swift */; };
+		008914A41C74306A000877CE /* cubeThrowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008914A31C74306A000877CE /* cubeThrowUITests.swift */; };
+		008914B21C743107000877CE /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008914B11C743107000877CE /* GameScene.swift */; };
+		008914B61C744773000877CE /* GeometryNodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008914B51C744773000877CE /* GeometryNodes.swift */; };
+		008914BC1C75B2A2000877CE /* BetoBlueBoard.png in Resources */ = {isa = PBXBuildFile; fileRef = 008914BB1C75B2A2000877CE /* BetoBlueBoard.png */; };
+		008914C01C765A0D000877CE /* CubeMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008914BF1C765A0D000877CE /* CubeMaker.swift */; };
+		008914D51C783A99000877CE /* GreenCubeFace.png in Resources */ = {isa = PBXBuildFile; fileRef = 008914CF1C783A99000877CE /* GreenCubeFace.png */; };
+		008914D61C783A99000877CE /* RedCubeFace.png in Resources */ = {isa = PBXBuildFile; fileRef = 008914D01C783A99000877CE /* RedCubeFace.png */; };
+		008914D71C783A99000877CE /* CyanCubeFace.png in Resources */ = {isa = PBXBuildFile; fileRef = 008914D11C783A99000877CE /* CyanCubeFace.png */; };
+		008914D81C783A99000877CE /* PurpleCubeFace.png in Resources */ = {isa = PBXBuildFile; fileRef = 008914D21C783A99000877CE /* PurpleCubeFace.png */; };
+		008914D91C783A99000877CE /* BlueCubeFace.png in Resources */ = {isa = PBXBuildFile; fileRef = 008914D31C783A99000877CE /* BlueCubeFace.png */; };
+		008914DA1C783A99000877CE /* YellowCubeFace.png in Resources */ = {isa = PBXBuildFile; fileRef = 008914D41C783A99000877CE /* YellowCubeFace.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		008914951C74306A000877CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 008914761C74306A000877CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0089147D1C74306A000877CE;
+			remoteInfo = cubeThrow;
+		};
+		008914A01C74306A000877CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 008914761C74306A000877CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0089147D1C74306A000877CE;
+			remoteInfo = cubeThrow;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0089147E1C74306A000877CE /* cubeThrow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cubeThrow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		008914811C74306A000877CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		008914831C74306A000877CE /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		008914851C74306A000877CE /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		008914881C74306A000877CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0089148A1C74306A000877CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0089148D1C74306A000877CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0089148F1C74306A000877CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		008914941C74306A000877CE /* cubeThrowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cubeThrowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		008914981C74306A000877CE /* cubeThrowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cubeThrowTests.swift; sourceTree = "<group>"; };
+		0089149A1C74306A000877CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0089149F1C74306A000877CE /* cubeThrowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cubeThrowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		008914A31C74306A000877CE /* cubeThrowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cubeThrowUITests.swift; sourceTree = "<group>"; };
+		008914A51C74306A000877CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		008914B11C743107000877CE /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		008914B51C744773000877CE /* GeometryNodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeometryNodes.swift; sourceTree = "<group>"; };
+		008914BB1C75B2A2000877CE /* BetoBlueBoard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BetoBlueBoard.png; sourceTree = "<group>"; };
+		008914BF1C765A0D000877CE /* CubeMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CubeMaker.swift; sourceTree = "<group>"; };
+		008914CF1C783A99000877CE /* GreenCubeFace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenCubeFace.png; sourceTree = "<group>"; };
+		008914D01C783A99000877CE /* RedCubeFace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RedCubeFace.png; sourceTree = "<group>"; };
+		008914D11C783A99000877CE /* CyanCubeFace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CyanCubeFace.png; sourceTree = "<group>"; };
+		008914D21C783A99000877CE /* PurpleCubeFace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PurpleCubeFace.png; sourceTree = "<group>"; };
+		008914D31C783A99000877CE /* BlueCubeFace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlueCubeFace.png; sourceTree = "<group>"; };
+		008914D41C783A99000877CE /* YellowCubeFace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YellowCubeFace.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0089147B1C74306A000877CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		008914911C74306A000877CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0089149C1C74306A000877CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		008914751C74306A000877CE = {
+			isa = PBXGroup;
+			children = (
+				008914801C74306A000877CE /* cubeThrow */,
+				008914971C74306A000877CE /* cubeThrowTests */,
+				008914A21C74306A000877CE /* cubeThrowUITests */,
+				0089147F1C74306A000877CE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0089147F1C74306A000877CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0089147E1C74306A000877CE /* cubeThrow.app */,
+				008914941C74306A000877CE /* cubeThrowTests.xctest */,
+				0089149F1C74306A000877CE /* cubeThrowUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		008914801C74306A000877CE /* cubeThrow */ = {
+			isa = PBXGroup;
+			children = (
+				008914CF1C783A99000877CE /* GreenCubeFace.png */,
+				008914D01C783A99000877CE /* RedCubeFace.png */,
+				008914D11C783A99000877CE /* CyanCubeFace.png */,
+				008914D21C783A99000877CE /* PurpleCubeFace.png */,
+				008914D31C783A99000877CE /* BlueCubeFace.png */,
+				008914D41C783A99000877CE /* YellowCubeFace.png */,
+				008914BB1C75B2A2000877CE /* BetoBlueBoard.png */,
+				008914811C74306A000877CE /* AppDelegate.swift */,
+				008914831C74306A000877CE /* art.scnassets */,
+				008914851C74306A000877CE /* GameViewController.swift */,
+				008914871C74306A000877CE /* Main.storyboard */,
+				0089148A1C74306A000877CE /* Assets.xcassets */,
+				0089148C1C74306A000877CE /* LaunchScreen.storyboard */,
+				0089148F1C74306A000877CE /* Info.plist */,
+				008914B11C743107000877CE /* GameScene.swift */,
+				008914B51C744773000877CE /* GeometryNodes.swift */,
+				008914BF1C765A0D000877CE /* CubeMaker.swift */,
+			);
+			path = cubeThrow;
+			sourceTree = "<group>";
+		};
+		008914971C74306A000877CE /* cubeThrowTests */ = {
+			isa = PBXGroup;
+			children = (
+				008914981C74306A000877CE /* cubeThrowTests.swift */,
+				0089149A1C74306A000877CE /* Info.plist */,
+			);
+			path = cubeThrowTests;
+			sourceTree = "<group>";
+		};
+		008914A21C74306A000877CE /* cubeThrowUITests */ = {
+			isa = PBXGroup;
+			children = (
+				008914A31C74306A000877CE /* cubeThrowUITests.swift */,
+				008914A51C74306A000877CE /* Info.plist */,
+			);
+			path = cubeThrowUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0089147D1C74306A000877CE /* cubeThrow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 008914A81C74306A000877CE /* Build configuration list for PBXNativeTarget "cubeThrow" */;
+			buildPhases = (
+				0089147A1C74306A000877CE /* Sources */,
+				0089147B1C74306A000877CE /* Frameworks */,
+				0089147C1C74306A000877CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = cubeThrow;
+			productName = cubeThrow;
+			productReference = 0089147E1C74306A000877CE /* cubeThrow.app */;
+			productType = "com.apple.product-type.application";
+		};
+		008914931C74306A000877CE /* cubeThrowTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 008914AB1C74306A000877CE /* Build configuration list for PBXNativeTarget "cubeThrowTests" */;
+			buildPhases = (
+				008914901C74306A000877CE /* Sources */,
+				008914911C74306A000877CE /* Frameworks */,
+				008914921C74306A000877CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				008914961C74306A000877CE /* PBXTargetDependency */,
+			);
+			name = cubeThrowTests;
+			productName = cubeThrowTests;
+			productReference = 008914941C74306A000877CE /* cubeThrowTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0089149E1C74306A000877CE /* cubeThrowUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 008914AE1C74306A000877CE /* Build configuration list for PBXNativeTarget "cubeThrowUITests" */;
+			buildPhases = (
+				0089149B1C74306A000877CE /* Sources */,
+				0089149C1C74306A000877CE /* Frameworks */,
+				0089149D1C74306A000877CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				008914A11C74306A000877CE /* PBXTargetDependency */,
+			);
+			name = cubeThrowUITests;
+			productName = cubeThrowUITests;
+			productReference = 0089149F1C74306A000877CE /* cubeThrowUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		008914761C74306A000877CE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = redgarage;
+				TargetAttributes = {
+					0089147D1C74306A000877CE = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					008914931C74306A000877CE = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 0089147D1C74306A000877CE;
+					};
+					0089149E1C74306A000877CE = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 0089147D1C74306A000877CE;
+					};
+				};
+			};
+			buildConfigurationList = 008914791C74306A000877CE /* Build configuration list for PBXProject "cubeThrow" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 008914751C74306A000877CE;
+			productRefGroup = 0089147F1C74306A000877CE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0089147D1C74306A000877CE /* cubeThrow */,
+				008914931C74306A000877CE /* cubeThrowTests */,
+				0089149E1C74306A000877CE /* cubeThrowUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0089147C1C74306A000877CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				008914841C74306A000877CE /* art.scnassets in Resources */,
+				008914D81C783A99000877CE /* PurpleCubeFace.png in Resources */,
+				008914DA1C783A99000877CE /* YellowCubeFace.png in Resources */,
+				0089148E1C74306A000877CE /* LaunchScreen.storyboard in Resources */,
+				008914D91C783A99000877CE /* BlueCubeFace.png in Resources */,
+				0089148B1C74306A000877CE /* Assets.xcassets in Resources */,
+				008914D61C783A99000877CE /* RedCubeFace.png in Resources */,
+				008914D71C783A99000877CE /* CyanCubeFace.png in Resources */,
+				008914D51C783A99000877CE /* GreenCubeFace.png in Resources */,
+				008914891C74306A000877CE /* Main.storyboard in Resources */,
+				008914BC1C75B2A2000877CE /* BetoBlueBoard.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		008914921C74306A000877CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0089149D1C74306A000877CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0089147A1C74306A000877CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				008914B21C743107000877CE /* GameScene.swift in Sources */,
+				008914861C74306A000877CE /* GameViewController.swift in Sources */,
+				008914B61C744773000877CE /* GeometryNodes.swift in Sources */,
+				008914C01C765A0D000877CE /* CubeMaker.swift in Sources */,
+				008914821C74306A000877CE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		008914901C74306A000877CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				008914991C74306A000877CE /* cubeThrowTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0089149B1C74306A000877CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				008914A41C74306A000877CE /* cubeThrowUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		008914961C74306A000877CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0089147D1C74306A000877CE /* cubeThrow */;
+			targetProxy = 008914951C74306A000877CE /* PBXContainerItemProxy */;
+		};
+		008914A11C74306A000877CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0089147D1C74306A000877CE /* cubeThrow */;
+			targetProxy = 008914A01C74306A000877CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		008914871C74306A000877CE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				008914881C74306A000877CE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0089148C1C74306A000877CE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0089148D1C74306A000877CE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		008914A61C74306A000877CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		008914A71C74306A000877CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		008914A91C74306A000877CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = YES;
+				INFOPLIST_FILE = cubeThrow/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.redgarage.cubeThrow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		008914AA1C74306A000877CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = YES;
+				INFOPLIST_FILE = cubeThrow/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.redgarage.cubeThrow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		008914AC1C74306A000877CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = cubeThrowTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.redgarage.cubeThrowTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cubeThrow.app/cubeThrow";
+			};
+			name = Debug;
+		};
+		008914AD1C74306A000877CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = cubeThrowTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.redgarage.cubeThrowTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cubeThrow.app/cubeThrow";
+			};
+			name = Release;
+		};
+		008914AF1C74306A000877CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = cubeThrowUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.redgarage.cubeThrowUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = cubeThrow;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		008914B01C74306A000877CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = cubeThrowUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.redgarage.cubeThrowUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = cubeThrow;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		008914791C74306A000877CE /* Build configuration list for PBXProject "cubeThrow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				008914A61C74306A000877CE /* Debug */,
+				008914A71C74306A000877CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		008914A81C74306A000877CE /* Build configuration list for PBXNativeTarget "cubeThrow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				008914A91C74306A000877CE /* Debug */,
+				008914AA1C74306A000877CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		008914AB1C74306A000877CE /* Build configuration list for PBXNativeTarget "cubeThrowTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				008914AC1C74306A000877CE /* Debug */,
+				008914AD1C74306A000877CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		008914AE1C74306A000877CE /* Build configuration list for PBXNativeTarget "cubeThrowUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				008914AF1C74306A000877CE /* Debug */,
+				008914B01C74306A000877CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 008914761C74306A000877CE /* Project object */;
+}
