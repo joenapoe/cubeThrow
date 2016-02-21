@@ -40,28 +40,65 @@ class GameScene: SCNScene, SCNSceneRendererDelegate {
         cameraNode.position = SCNVector3Make(0, 4, 0);
         cameraNode.eulerAngles = SCNVector3Make(Float(-M_PI/2), 0, 0);
         
-//        cameraNode.rotation = SCNVector4(2,0,0,0)
-//        cameraNode.eulerAngles.y = Float(M_PI_4*3)
-//        cameraNode.eulerAngles = SCNVector3(Float(M_PI),0,0)
         
         rootNode.addChildNode(cameraNode)
         
         
-        let lightNodeOmi = SCNNode()
-        lightNodeOmi.light = SCNLight()
-        lightNodeOmi.light!.type = SCNLightTypeAmbient
-        lightNodeOmi.position = SCNVector3(0,2,30)
-        rootNode.addChildNode(lightNodeOmi)
+//        let lightNodeOmi = SCNNode()
+//        lightNodeOmi.light = SCNLight()
+//        lightNodeOmi.light!.type = SCNLightTypeAmbient
+//        lightNodeOmi.position = SCNVector3(0,20,30)
+//        rootNode.addChildNode(lightNodeOmi)
         
-//        let lightNodeSpot = SCNNode()
-//        lightNodeSpot.light = SCNLight()
-//        lightNodeSpot.light!.type = SCNLightTypeSpot
-//        lightNodeSpot.light!.attenuationStartDistance = 0
-//        lightNodeSpot.light!.attenuationFalloffExponent = 2
-//        lightNodeSpot.light!.attenuationEndDistance = 30
-//        lightNodeSpot.position = SCNVector3(0,1,2)
-//        rootNode.addChildNode(lightNodeSpot)
-//        lightNodeSpot.constraints = [SCNLookAtConstraint(target: emptyTarget)]
+        let lightNodeSpot = SCNNode()
+        lightNodeSpot.light = SCNLight()
+        lightNodeSpot.light!.type = SCNLightTypeSpot
+        lightNodeSpot.light!.attenuationStartDistance = 0
+        lightNodeSpot.light!.attenuationFalloffExponent = 1
+        lightNodeSpot.light!.attenuationEndDistance = 50
+        lightNodeSpot.position = SCNVector3(0,10,0)
+        lightNodeSpot.constraints = [SCNLookAtConstraint(target: emptyTarget)]
+        rootNode.addChildNode(lightNodeSpot)
+
+        let lightNodeSpotLeft = SCNNode()
+        lightNodeSpotLeft.light = SCNLight()
+        lightNodeSpotLeft.light!.type = SCNLightTypeSpot
+        lightNodeSpotLeft.light!.attenuationStartDistance = 0
+        lightNodeSpotLeft.light!.attenuationFalloffExponent = 1
+        lightNodeSpotLeft.light!.attenuationEndDistance = 15
+        lightNodeSpotLeft.position = SCNVector3(-10,0,0)
+        lightNodeSpotLeft.constraints = [SCNLookAtConstraint(target: emptyTarget)]
+        rootNode.addChildNode(lightNodeSpotLeft)
+        
+        let lightNodeSpotRight = SCNNode()
+        lightNodeSpotRight.light = SCNLight()
+        lightNodeSpotRight.light!.type = SCNLightTypeSpot
+        lightNodeSpotRight.light!.attenuationStartDistance = 0
+        lightNodeSpotRight.light!.attenuationFalloffExponent = 1
+        lightNodeSpotRight.light!.attenuationEndDistance = 15
+        lightNodeSpotRight.position = SCNVector3(10,0,0)
+        lightNodeSpotRight.constraints = [SCNLookAtConstraint(target: emptyTarget)]
+        rootNode.addChildNode(lightNodeSpotRight)
+        
+        let lightNodeSpotBack = SCNNode()
+        lightNodeSpotBack.light = SCNLight()
+        lightNodeSpotBack.light!.type = SCNLightTypeSpot
+        lightNodeSpotBack.light!.attenuationStartDistance = 0
+        lightNodeSpotBack.light!.attenuationFalloffExponent = 1
+        lightNodeSpotBack.light!.attenuationEndDistance = 15
+        lightNodeSpotBack.position = SCNVector3(0,10,0)
+        lightNodeSpotBack.constraints = [SCNLookAtConstraint(target: emptyTarget)]
+        rootNode.addChildNode(lightNodeSpotBack)
+        
+        let lightNodeSpotFront = SCNNode()
+        lightNodeSpotFront.light = SCNLight()
+        lightNodeSpotFront.light!.type = SCNLightTypeSpot
+        lightNodeSpotFront.light!.attenuationStartDistance = 0
+        lightNodeSpotFront.light!.attenuationFalloffExponent = 1
+        lightNodeSpotFront.light!.attenuationEndDistance = 15
+        lightNodeSpotFront.position = SCNVector3(0,-10,0)
+        lightNodeSpotFront.constraints = [SCNLookAtConstraint(target: emptyTarget)]
+        rootNode.addChildNode(lightNodeSpotFront)
         
         
         let invisiPlane = geometryNodes.getPhysicsPlane()

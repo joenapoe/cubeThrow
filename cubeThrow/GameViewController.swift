@@ -15,6 +15,7 @@ class GameViewController: UIViewController {
     var sceneView: SCNView?
     var scene = GameScene(create: true)
     var panGesture = UIPanGestureRecognizer.self()
+    var touchCount = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,40 +55,42 @@ class GameViewController: UIViewController {
         
         print("X \(translationX) by Y \(translationY)")
         
+        if touchCount < 17 {
 
-        
-        
-        for node in scene.rootNode.childNodes {
-            
-            if let physBody = node.physicsBody {
-
-                if translationY < -100 {
-                    //                physBody.applyTorque(SCNVector4(x: -2.79, y: 0.336, z: -2.79, w: 0.336), impulse: true)
-                    //                physBody.applyForce(SCNVector3(x: -1.395, y: 3.45333, z: 3.45333), impulse: true)
-                    
-                    physBody.applyTorque(SCNVector4( -(translationY/400), (translationY/400), (-translationY/400), -(translationY/400)), impulse: true)
-                    physBody.velocity = SCNVector3(translationX/100,(translationY/400+3.5),-(translationY/400+3.5))
-                    
-                    if gesture.state == UIGestureRecognizerState.Ended {
-                        gesture.enabled = false
-                        print("Ended")
-                    }
-
-                    //TODO: need to limit the amount of time while throwing (could be too long)
-                    //TODO: the minimum throw is too low and the max is too strong
-                }
+            for node in scene.rootNode.childNodes {
                 
-
+                if let physBody = node.physicsBody {
+                    
+                    if translationY < -100 {
+                        
+                        physBody.applyTorque(SCNVector4(1,1,1,(translationY/400-1)), impulse: true) //Perfect spin
+                        physBody.applyForce(SCNVector3(translationX/17,(-translationY/130)+17,(translationY/5)-11), impulse: true) //MIN (0,17,-31) MAX (0,21,-65)
+                        
+                        if gesture.state == UIGestureRecognizerState.Ended {
+                            gesture.enabled = false
+                            print("Ended")
+                        }
+                        
+                        //TODO: need to limit the amount of time while throwing (could be too long)
+                        //TODO: the minimum throw is too low and the max is too strong
+                        //TODO: the blocks shold be thrown higher?
+                        //TODO: not enough Z speed -Arielle
+                        //TODO: the minimum throw is too slow
+                        //TODO: Need getUpSide()
+                        
+                        touchCount++
+                        print(touchCount)
+                    }
+                }
             }
-        
         }
-
     }
     
     func handleTap(gesture:UITapGestureRecognizer) {
         
         panGesture.enabled = true
-
+        touchCount = 0
+        
         for node in scene.rootNode.childNodes {
 
             getUpSide(node)
@@ -146,8 +149,11 @@ class GameViewController: UIViewController {
             if node.name == "cube" {
                 node.physicsBody?.velocity = SCNVector3(0,0,0)
                 node.physicsBody?.angularVelocity = SCNVector4(0,0,0,0)
-                node.position = SCNVector3(-0.15*count,0.15,+1.35)
+                node.position = SCNVector3((-0.15*count+0.11),0.15,+1.35)
+                node.rotation = SCNVector4(Float(arc4random()%20),Float(arc4random()%20),Float(arc4random()%20),Float(arc4random()%20))
+                
                 count++
+            
             }
 
             
