@@ -26,7 +26,7 @@ class CubeMaker:SCNNode {
         }
         
         self.geometry = SCNBox (width: 0.3, height: 0.3, length: 0.3, chamferRadius: 0.06) //0.3 to 0.06
-        self.position = SCNVector3(x,0.15,-1.25)
+        self.position = SCNVector3(x,0.15,1.35)
         self.name = "cube"
     }
     

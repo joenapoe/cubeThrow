@@ -14,6 +14,7 @@ class GameViewController: UIViewController {
     
     var sceneView: SCNView?
     var scene = GameScene(create: true)
+    var panGesture = UIPanGestureRecognizer.self()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,58 +29,76 @@ class GameViewController: UIViewController {
             view.backgroundColor = UIColor.blackColor()
             view.antialiasingMode = SCNAntialiasingMode.Multisampling4X
             
-            let panGesture = UIPanGestureRecognizer(target: self, action: "handlePan:")
-            view.addGestureRecognizer(panGesture)
             
+            panGesture = UIPanGestureRecognizer(target: self, action: "handlePan:")
+            view.addGestureRecognizer(panGesture)
+
             let tapGesture = UITapGestureRecognizer(target: self, action: "handleTap:")
+            
+            
             view.addGestureRecognizer(tapGesture)
             
-//            view.touchesEnded(panGesture, withEvent: "handlePan:")
+//            view.touchesEnded(panGesture, withEvent: nil)
         }
         
     }
+    
+    func addGestureRecognizer(gestureRecognizer: UIGestureRecognizer) {
+        
+    }
+
     
     func handlePan(gesture:UIPanGestureRecognizer) {
         let translationY = gesture.translationInView(sceneView!).y
         let translationX = gesture.translationInView(sceneView!).x
         
         print("X \(translationX) by Y \(translationY)")
+        
 
-
+        
         
         for node in scene.rootNode.childNodes {
             
             if let physBody = node.physicsBody {
-//                physBody.applyForce(SCNVector3(translationX/25,-translationY/50,translationY/25), impulse: true)
-//                physBody.angularVelocity = SCNVector4(translationX/10,translationX/10,translationX/10,translationX/10)
-                physBody.applyTorque(SCNVector4(translationX/50,(translationY/1000+0.2),translationX/50,(translationY/1000+0.2)), impulse: true)
-                physBody.velocity = SCNVector3(translationX/100,(translationY/300+3),(translationY/300+3))
-                physBody.affectedByGravity = true
+
+                if translationY < -100 {
+                    //                physBody.applyTorque(SCNVector4(x: -2.79, y: 0.336, z: -2.79, w: 0.336), impulse: true)
+                    //                physBody.applyForce(SCNVector3(x: -1.395, y: 3.45333, z: 3.45333), impulse: true)
+                    
+                    physBody.applyTorque(SCNVector4( -(translationY/400), (translationY/400), (-translationY/400), -(translationY/400)), impulse: true)
+                    physBody.velocity = SCNVector3(translationX/100,(translationY/400+3.5),-(translationY/400+3.5))
+                    
+                    if gesture.state == UIGestureRecognizerState.Ended {
+                        gesture.enabled = false
+                        print("Ended")
+                    }
+
+                    //TODO: need to limit the amount of time while throwing (could be too long)
+                    //TODO: the minimum throw is too low and the max is too strong
+                }
+                
+
             }
+        
         }
 
     }
     
     func handleTap(gesture:UITapGestureRecognizer) {
         
+        panGesture.enabled = true
+
         for node in scene.rootNode.childNodes {
-            
-            if let physBody = node.physicsBody {
-                
+
+            getUpSide(node)
+            resetCubes()
+
+//            if let physBody = node.physicsBody {
 //                print(node.orientation)
-  
-                print(node.name)
-                getUpSide(node)
-                
-                
-                resetCubes()
-                
-            }
+//                print(node.name)
+//            }
+
         }
-        
-        
-        
-    
     }
     
     func getUpSide(node: SCNNode) {
@@ -120,14 +139,22 @@ class GameViewController: UIViewController {
     
     func resetCubes() {
         
+        var count = 0.0
+        
         for node in scene.rootNode.childNodes {
             
             if node.name == "cube" {
-                print(node)
-                node.position = SCNVector3(0,0.15,-1.25)
+                node.physicsBody?.velocity = SCNVector3(0,0,0)
+                node.physicsBody?.angularVelocity = SCNVector4(0,0,0,0)
+                node.position = SCNVector3(-0.15*count,0.15,+1.35)
+                count++
             }
+
             
         }
+        
+        count = 0.0
+        
     }
     
     override func shouldAutorotate() -> Bool {

@@ -70,7 +70,7 @@ class GameScene: SCNScene, SCNSceneRendererDelegate {
         
         let invisiPlaneFront = SCNNode(geometry: invisiPlane)
         invisiPlaneFront.opacity = planeOpacity
-        invisiPlaneFront.position = SCNVector3(0,0,planePositionScalar)
+        invisiPlaneFront.position = SCNVector3(0,0,0.9*planePositionScalar)
         invisiPlaneFront.physicsBody = geometryNodes.getPlanePhysicsBody()
         rootNode.addChildNode(invisiPlaneFront)
         
@@ -90,7 +90,7 @@ class GameScene: SCNScene, SCNSceneRendererDelegate {
         
         let invisiPlaneBack = SCNNode(geometry: invisiPlane)
         invisiPlaneBack.opacity = planeOpacity
-        invisiPlaneBack.position = SCNVector3(0,0,-planePositionScalar)
+        invisiPlaneBack.position = SCNVector3(0,0,-0.9*planePositionScalar)
         invisiPlaneBack.physicsBody = geometryNodes.getPlanePhysicsBody()
         rootNode.addChildNode(invisiPlaneBack)
         
