@@ -17,6 +17,9 @@ class GameViewController: UIViewController {
     var panGesture = UIPanGestureRecognizer.self()
     var touchCount = 0.0
     
+    var checkRest = NSTimer()
+    var timer = 0.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,18 +33,15 @@ class GameViewController: UIViewController {
             view.backgroundColor = UIColor.blackColor()
             view.antialiasingMode = SCNAntialiasingMode.Multisampling4X
             
-            
             panGesture = UIPanGestureRecognizer(target: self, action: "handlePan:")
             view.addGestureRecognizer(panGesture)
-
-            let tapGesture = UITapGestureRecognizer(target: self, action: "handleTap:")
             
+            let tapGesture = UITapGestureRecognizer(target: self, action: "handleTap:")
             
             view.addGestureRecognizer(tapGesture)
             
-//            view.touchesEnded(panGesture, withEvent: nil)
+
         }
-        
     }
     
     func addGestureRecognizer(gestureRecognizer: UIGestureRecognizer) {
@@ -52,37 +52,34 @@ class GameViewController: UIViewController {
     func handlePan(gesture:UIPanGestureRecognizer) {
         let translationY = gesture.translationInView(sceneView!).y
         let translationX = gesture.translationInView(sceneView!).x
-        
         print("X \(translationX) by Y \(translationY)")
-        
-        if touchCount < 17 {
 
-            for node in scene.rootNode.childNodes {
+        
+        
+        if touchCount < 2 {
+        
+            if translationY < -100 {
                 
-                if let physBody = node.physicsBody {
-                    
-                    if translationY < -100 {
-                        
+                for node in scene.rootNode.childNodes {
+                    if let physBody = node.physicsBody {
                         physBody.applyTorque(SCNVector4(1,1,1,(translationY/400-1)), impulse: true) //Perfect spin
                         physBody.applyForce(SCNVector3(translationX/17,(-translationY/130)+17,(translationY/5)-11), impulse: true) //MIN (0,17,-31) MAX (0,21,-65)
-                        
-                        if gesture.state == UIGestureRecognizerState.Ended {
-                            gesture.enabled = false
-                            print("Ended")
-                        }
-                        
-                        //TODO: need to limit the amount of time while throwing (could be too long)
-                        //TODO: the minimum throw is too low and the max is too strong
-                        //TODO: the blocks shold be thrown higher?
-                        //TODO: not enough Z speed -Arielle
-                        //TODO: the minimum throw is too slow
-                        //TODO: Need getUpSide()
-                        
-                        touchCount++
-                        print(touchCount)
+                        print("Force applied on \(physBody)")
                     }
                 }
+                
+//                if gesture.state == UIGestureRecognizerState.Ended { //2 touches happen so fast
+//                    gesture.enabled = false
+//                    print("Gesture is disabled")
+//                }
+                
+                print("touchCount \(touchCount)")
+                touchCount++
+
+                
             }
+        } else if touchCount >= 2{
+            checkRest = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "checkCubeRest", userInfo: nil, repeats: false)
         }
     }
     
@@ -96,12 +93,38 @@ class GameViewController: UIViewController {
             getUpSide(node)
             resetCubes()
 
-//            if let physBody = node.physicsBody {
-//                print(node.orientation)
-//                print(node.name)
-//            }
-
         }
+        
+        
+    }
+    
+    func checkCubeRest() {
+        timer++
+        
+        var cubeRestCount = 0
+        
+        for node in scene.rootNode.childNodes { //todo not working
+            if let physBody = node.physicsBody {
+                if physBody.isResting {
+                    print("CUBE IS AT REST")
+                    cubeRestCount++
+                }
+            }
+        }
+        
+        if cubeRestCount == 3 {
+            timer = 0
+            checkRest.invalidate()
+            cubeRestCount = 0
+        }
+        print("Checking Cube Rest \(timer)")
+        
+//        if timer > 20 {
+//            timer = 0
+//            checkRest.invalidate()
+//            print("Stop timer")
+//        }
+        
     }
     
     func getUpSide(node: SCNNode) {
@@ -149,7 +172,7 @@ class GameViewController: UIViewController {
             if node.name == "cube" {
                 node.physicsBody?.velocity = SCNVector3(0,0,0)
                 node.physicsBody?.angularVelocity = SCNVector4(0,0,0,0)
-                node.position = SCNVector3((-0.15*count+0.11),0.15,+1.35)
+                node.position = SCNVector3((-0.25*count+0.17),0.15,+1.35)
                 node.rotation = SCNVector4(Float(arc4random()%20),Float(arc4random()%20),Float(arc4random()%20),Float(arc4random()%20))
                 
                 count++

@@ -25,6 +25,7 @@
 		008914D81C783A99000877CE /* PurpleCubeFace.png in Resources */ = {isa = PBXBuildFile; fileRef = 008914D21C783A99000877CE /* PurpleCubeFace.png */; };
 		008914D91C783A99000877CE /* BlueCubeFace.png in Resources */ = {isa = PBXBuildFile; fileRef = 008914D31C783A99000877CE /* BlueCubeFace.png */; };
 		008914DA1C783A99000877CE /* YellowCubeFace.png in Resources */ = {isa = PBXBuildFile; fileRef = 008914D41C783A99000877CE /* YellowCubeFace.png */; };
+		008914DC1C7A9EA8000877CE /* BetoBlueBoard3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 008914DB1C7A9EA8000877CE /* BetoBlueBoard3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		008914D21C783A99000877CE /* PurpleCubeFace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PurpleCubeFace.png; sourceTree = "<group>"; };
 		008914D31C783A99000877CE /* BlueCubeFace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlueCubeFace.png; sourceTree = "<group>"; };
 		008914D41C783A99000877CE /* YellowCubeFace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YellowCubeFace.png; sourceTree = "<group>"; };
+		008914DB1C7A9EA8000877CE /* BetoBlueBoard3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BetoBlueBoard3x.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 		008914801C74306A000877CE /* cubeThrow */ = {
 			isa = PBXGroup;
 			children = (
+				008914DB1C7A9EA8000877CE /* BetoBlueBoard3x.png */,
 				008914CF1C783A99000877CE /* GreenCubeFace.png */,
 				008914D01C783A99000877CE /* RedCubeFace.png */,
 				008914D11C783A99000877CE /* CyanCubeFace.png */,
@@ -269,6 +272,7 @@
 				008914D91C783A99000877CE /* BlueCubeFace.png in Resources */,
 				0089148B1C74306A000877CE /* Assets.xcassets in Resources */,
 				008914D61C783A99000877CE /* RedCubeFace.png in Resources */,
+				008914DC1C7A9EA8000877CE /* BetoBlueBoard3x.png in Resources */,
 				008914D71C783A99000877CE /* CyanCubeFace.png in Resources */,
 				008914D51C783A99000877CE /* GreenCubeFace.png in Resources */,
 				008914891C74306A000877CE /* Main.storyboard in Resources */,
@@ -532,6 +536,7 @@
 				008914AA1C74306A000877CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		008914AB1C74306A000877CE /* Build configuration list for PBXNativeTarget "cubeThrowTests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +545,7 @@
 				008914AD1C74306A000877CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		008914AE1C74306A000877CE /* Build configuration list for PBXNativeTarget "cubeThrowUITests" */ = {
 			isa = XCConfigurationList;
@@ -548,6 +554,7 @@
 				008914B01C74306A000877CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

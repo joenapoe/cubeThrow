@@ -27,10 +27,10 @@ class GeometryNodes {
         blackSide.locksAmbientWithDiffuse = false
     
         let floorMaterial = SCNMaterial()
-        floorMaterial.diffuse.contents = UIImage(named: "BetoBlueBoard")!
+        floorMaterial.diffuse.contents = UIImage(named: "BetoBlueBoard3x")!
         floorMaterial.locksAmbientWithDiffuse = false
 
-        boardFloor.geometry = SCNBox(width: 2, height: 0.5, length: 4, chamferRadius: 0)
+        boardFloor.geometry = SCNBox(width: 2.25, height: 0.5, length: 4, chamferRadius: 0)
         boardFloor.position = SCNVector3(0,0,0)
         boardFloor.geometry!.materials = [blackSide, blackSide, blackSide, blackSide, floorMaterial, blackSide]
         boardFloor.physicsBody = SCNPhysicsBody.staticBody()

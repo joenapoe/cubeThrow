@@ -19,7 +19,7 @@ class GameScene: SCNScene, SCNSceneRendererDelegate {
         self.init()
         
         let emptyTarget = SCNNode()
-        emptyTarget.position = SCNVector3(0,0,0)
+        emptyTarget.position = SCNVector3(0,0.15,0)
 
         let floor = SCNFloor()
         
@@ -37,7 +37,7 @@ class GameScene: SCNScene, SCNSceneRendererDelegate {
 //        cameraNode.position = SCNVector3Make(0, 0.5, 2)
 //        cameraNode.rotation = SCNVector4(2,0,0, Float(-M_PI / 16.0))
 
-        cameraNode.position = SCNVector3Make(0, 4, 0);
+        cameraNode.position = SCNVector3Make(0, 3.7, 0);
         cameraNode.eulerAngles = SCNVector3Make(Float(-M_PI/2), 0, 0);
         
         
@@ -127,7 +127,7 @@ class GameScene: SCNScene, SCNSceneRendererDelegate {
         
         let invisiPlaneBack = SCNNode(geometry: invisiPlane)
         invisiPlaneBack.opacity = planeOpacity
-        invisiPlaneBack.position = SCNVector3(0,0,-0.9*planePositionScalar)
+        invisiPlaneBack.position = SCNVector3(0,0,-0.85*planePositionScalar)
         invisiPlaneBack.physicsBody = geometryNodes.getPlanePhysicsBody()
         rootNode.addChildNode(invisiPlaneBack)
         
