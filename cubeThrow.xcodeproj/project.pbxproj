@@ -98,6 +98,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00084BAA1C83DA7B002F90ED /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				008914DB1C7A9EA8000877CE /* BetoBlueBoard3x.png */,
+				008914CF1C783A99000877CE /* GreenCubeFace.png */,
+				008914D01C783A99000877CE /* RedCubeFace.png */,
+				008914D11C783A99000877CE /* CyanCubeFace.png */,
+				008914D21C783A99000877CE /* PurpleCubeFace.png */,
+				008914D31C783A99000877CE /* BlueCubeFace.png */,
+				008914D41C783A99000877CE /* YellowCubeFace.png */,
+				008914BB1C75B2A2000877CE /* BetoBlueBoard.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		008914751C74306A000877CE = {
 			isa = PBXGroup;
 			children = (
@@ -121,14 +136,7 @@
 		008914801C74306A000877CE /* cubeThrow */ = {
 			isa = PBXGroup;
 			children = (
-				008914DB1C7A9EA8000877CE /* BetoBlueBoard3x.png */,
-				008914CF1C783A99000877CE /* GreenCubeFace.png */,
-				008914D01C783A99000877CE /* RedCubeFace.png */,
-				008914D11C783A99000877CE /* CyanCubeFace.png */,
-				008914D21C783A99000877CE /* PurpleCubeFace.png */,
-				008914D31C783A99000877CE /* BlueCubeFace.png */,
-				008914D41C783A99000877CE /* YellowCubeFace.png */,
-				008914BB1C75B2A2000877CE /* BetoBlueBoard.png */,
+				00084BAA1C83DA7B002F90ED /* Images */,
 				008914811C74306A000877CE /* AppDelegate.swift */,
 				008914831C74306A000877CE /* art.scnassets */,
 				008914851C74306A000877CE /* GameViewController.swift */,
